@@ -50,8 +50,14 @@ model = Transformer(n_layers=4, d_emb=128, n_heads=8, d_ff=512,
                     tgt_vocab_size=vocab_size)
 
 # Build model once
-dummy_input = tf.constant([[1] * seq_length])
-model((dummy_input, dummy_input))
+# dummy_input = tf.constant([[1] * seq_length])
+# model((dummy_input, dummy_input))
+
+example_sentence = "hello"
+src = source_vectorization([example_sentence])
+tgt = target_vectorization(["[start] hello [end]"])[:, :-1]
+model((src, tgt))  # build model with real input shapes
+
 model.load_weights("translation_transformer.weights.h5")
 
 # 🔹 Translation function
