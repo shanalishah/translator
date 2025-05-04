@@ -11,9 +11,9 @@ from transformer import Transformer
 from keras.saving import register_keras_serializable
 
 # 🔹 Replace these with your actual Google Drive file IDs
-WEIGHTS_FILE_ID = "https://drive.google.com/file/d/1r5_qQhb975vaO6XXV_SyI8ytzE3obV9u/view?usp=share_link"
-SOURCE_VEC_ID   = "https://drive.google.com/file/d/10NfA0tF9zs2CHYSNAHmQ_nRU9LDwjv50/view?usp=share_link"
-TARGET_VEC_ID   = "https://drive.google.com/file/d/1gXNAutl1HtPhMpNtmQ78JscLSkR2_Qid/view?usp=share_link"
+WEIGHTS_FILE_ID = "1r5_qQhb975vaO6XXV_SyI8ytzE3obV9u"
+SOURCE_VEC_ID   = "10NfA0tF9zs2CHYSNAHmQ_nRU9LDwjv50"
+TARGET_VEC_ID   = "1gXNAutl1HtPhMpNtmQ78JscLSkR2_Qid"
 
 # 🔻 Function to download from Google Drive
 def download_file_from_drive(file_id, output):
